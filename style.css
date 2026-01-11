@@ -1,3 +1,11 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x;hidden;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 * {
@@ -8,7 +16,7 @@
 }
 
 body {
-  min-height: 100vh;
+  height: 100%;
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   display: flex;
   align-items: center;
@@ -249,3 +257,4 @@ p {
 .container {
   max-width: 460px;
 }
+
