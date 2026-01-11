@@ -1,21 +1,23 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const btn = document.getElementById("generateBtn");
+document.getElementById("userForm").addEventListener("submit", function(e) {
+  e.preventDefault();
 
-  btn.addEventListener("click", function () {
-    const age = document.getElementById("age").value;
-    const height = document.getElementById("height").value;
-    const weight = document.getElementById("weight").value;
+  const height = Number(document.getElementById("height").value);
+  const weight = Number(document.getElementById("weight").value);
+  const goal = document.getElementById("goal").value;
+  const diet = document.querySelector('input[name="diet"]:checked').value;
 
-    if (!age || !height || !weight) {
-      alert("Please fill all details");
-      return;
-    }
+  const bmi = (weight / ((height / 100) ** 2)).toFixed(2);
 
-    alert(
-      "Plan Generated!\n\n" +
-      "Age: " + age +
-      "\nHeight: " + height + " cm" +
-      "\nWeight: " + weight + " kg"
-    );
-  });
+  let calories = weight * 24;
+  if (goal === "loss") calories -= 500;
+  if (goal === "gain") calories += 500;
+
+  localStorage.setItem("bmi", bmi);
+  localStorage.setItem("calories", calories);
+  localStorage.setItem("goal", goal);
+  localStorage.setItem("diet", diet);
+  localStorage.setItem("startWeight", weight);
+
+
+  window.location.href = "dashboard.html";
 });
