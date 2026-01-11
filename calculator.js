@@ -1,14 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const btn = document.getElementById("generateBtn");
 
-  if (!btn) {
-    console.error("Button not found");
-    return;
-  }
-
-  btn.addEventListener("click", function (e) {
-    e.preventDefault();
-
+  btn.addEventListener("click", function () {
     const age = document.getElementById("age").value;
     const height = document.getElementById("height").value;
     const weight = document.getElementById("weight").value;
