@@ -263,6 +263,32 @@ p {
   max-width: 460px;
 }
 
+/* ===== FIX INPUT VISIBILITY ===== */
+input,
+select {
+  color: #000;
+  background: #ffffff;
+}
+
+input::placeholder {
+  color: #666;
+  opacity: 1;
+}
+
+/* Fix radio buttons alignment */
+.radio-group {
+  display: flex;
+  justify-content: space-around;
+  margin: 15px 0;
+  color: #000;
+}
+
+/* Fix paragraph text inside card */
+.container p,
+.container label {
+  color: #000;
+}
+
 
 
 
