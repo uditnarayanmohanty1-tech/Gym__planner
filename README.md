@@ -7,9 +7,7 @@ The project focuses on clean UI, smooth animations, and a user-friendly experien
 
 ## 🌐 Live Demo
 
-👉 Live Website: https://YOUR-USERNAME.github.io/REPOSITORY-NAME/
-
-(Replace `YOUR-USERNAME` and `REPOSITORY-NAME` with your actual GitHub details)
+👉 Live Website: https://uditnarayanmohanty1-tech.github.io/Gym__planner/
 
 ---
 
