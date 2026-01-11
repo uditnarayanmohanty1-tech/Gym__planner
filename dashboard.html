@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+
+
+<div class="container">
+  <h2>📊 Your Fitness Dashboard</h2>
+
+<p>🔥 BMI: <strong id="bmi" class="bmi-value"></strong></p>
+
+<p>⚡ Calories: <strong id="calories"></strong> kcal</p>
+<p>🥗 Diet Type: <strong id="diet"></strong></p>
+
+
+<a href="diet.html" class="action-btn">🥗 View Diet Plan</a>
+<a href="workout.html" class="action-btn">🏋️ View Workout Plan</a>
+<a href="progress.html" class="action-btn">📈 Track Progress</a>
+
+ <div class="credit">
+  Designed & Developed by <strong>UDIT NARAYAN MOHANTY</strong>
+</div>
+</div>
+
+<script>
+  const bmiValue = parseFloat(localStorage.getItem("bmi"));
+  const bmiEl = document.getElementById("bmi");
+
+  bmiEl.innerText = bmiValue;
+
+  if (bmiValue < 25) {
+    bmiEl.classList.add("bmi-green");
+  } else if (bmiValue < 30) {
+    bmiEl.classList.add("bmi-yellow");
+  } else {
+    bmiEl.classList.add("bmi-red");
+  }
+
+  document.getElementById("calories").innerText = localStorage.getItem("calories");
+  document.getElementById("diet").innerText =
+    localStorage.getItem("diet") === "veg" ? "Vegetarian" : "Non-Vegetarian";
+</script>
+
+
+</body>
+</html>

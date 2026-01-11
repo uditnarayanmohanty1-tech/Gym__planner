@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gym Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<div class="container">
+ <h2>🏋️ Gym Workout & Diet Planner</h2>
+<p style="text-align:center; font-size:14px; opacity:0.9;">
+  Personalized fitness plans made for you
+</p>
+
+  <form id="userForm">
+    <input type="number" id="age" placeholder="Age" required>
+    <input type="number" id="height" placeholder="Height (cm)" required>
+    <input type="number" id="weight" placeholder="Weight (kg)" required>
+
+    <select id="goal" required>
+      <option value="">Select Goal</option>
+      <option value="loss">Fat Loss</option>
+      <option value="gain">Muscle Gain</option>
+      <option value="maintain">Maintenance</option>
+    </select>
+
+    <p>Diet Preference:</p>
+
+<div class="radio-group">
+  <label>
+    <input type="radio" name="diet" value="veg" required>
+    Vegetarian
+  </label>
+
+  <label>
+    <input type="radio" name="diet" value="nonveg">
+    Non-Vegetarian
+  </label>
+</div>
+
+
+    <button type="submit">Generate Plan</button>
+  </form>
+  <div class="credit">
+  Designed & Developed by <strong>UDIT NARAYAN MOHANTY</strong>
+</div>
+</div>
+
+<script src="calculator.js"></script>
+</body>
+</html>
