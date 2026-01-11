@@ -16,14 +16,15 @@ html, body {
 }
 
 body {
-  height: 100%;
+  min-height: 100dvh;
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   display: flex;
   justify-content: center;
-  padding: 40px 20px;
+  padding: 60px 20px 40px;
   color: #fff;
   overflow-y: auto;
 }
+
 
 
 
@@ -260,5 +261,6 @@ p {
 .container {
   max-width: 460px;
 }
+
 
 
